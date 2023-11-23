@@ -3,10 +3,9 @@ function replacealpha(str,n){
     let result=''
     while(i<str.length-n){
         result+=str[i+n]
-        console.log(str[i+n]);
         i++
     }
     return result
 }
 
-console.log(replacealpha("ashwinkv",2));
+console.log(replacealpha("ashwinkv",3));
