@@ -64,7 +64,6 @@ class BinarySearchTree {
         let queue = {}
         let rear = 0
         let front = 0
-        console.log();
         queue[rear] = this.root
         rear++
         while (rear != front) {
@@ -73,7 +72,6 @@ class BinarySearchTree {
             console.log(cur.val);
             if (cur.left) {
                 queue[rear] = cur.left
-
                 rear++
             }
             if (cur.right) {

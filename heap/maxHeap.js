@@ -3,6 +3,14 @@ class Maxheap {
         this.heap = [null]
     }
 
+
+    buid(arr){
+        for (let i = 0; i < arr.length; i++) {
+           this.insert(arr[i])
+        }
+        return
+    }
+
     insert(val) {
         this.heap.push(val)
         if (this.heap.length > 2) {
