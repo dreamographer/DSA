@@ -57,9 +57,10 @@ class HashTable{
 
 }
 
-const hashTable=new HashTable(3)
+const hashTable=new HashTable(2)
 hashTable.set("ab","ashwin")
 hashTable.set("ba","new anem")
+hashTable.set("ba","new afernem")
 hashTable.set("baca","new anem")
 console.log(hashTable.get("ab"));
 

@@ -1,26 +1,28 @@
-class MinHeap{
-    constructor(){
-        this.heap=[null]
-    }
-    insert(num){
-        this.heap.push(num)
-        if(this.heap.length>2){
-            let idx=this.heap.length-1
-            while(this.heap[idx]<this.heap[Math.floor(idx/2)]){
-                if(idx>=1){
-                    [this.heap[Math.floor(idx/2)],this.heap[idx]]=[this.heap[idx],this.heap[Math.floor(idx/2)]]
-                    if (Math.floor(idx/2)>1) {
-                        idx=Math.floor(idx/2)
-                        
-                    }else{
-                        break;
-                    }
-                }
-            }
-        }
-    };
+class MinHeap {
+	constructor() {
+		this.heap = [null]
+	}
 
-    remove(){
+	
+	insert(num) {
+		this.heap.push(num)
+		if (this.heap.length > 2) {
+			let idx = this.heap.length - 1
+			while (this.heap[idx] < this.heap[Math.floor(idx / 2)]) {
+				if (idx >= 1) {
+					[this.heap[Math.floor(idx / 2)], this.heap[idx]] = [this.heap[idx], this.heap[Math.floor(idx / 2)]]
+					if (Math.floor(idx / 2) > 1) {
+						idx = Math.floor(idx / 2)
+
+					} else {
+						break;
+					}
+				}
+			}
+		}
+	};
+
+	remove() {
 		let smallest = this.heap[1];
 		if (this.heap.length > 2) {
 			this.heap[1] = this.heap[this.heap.length - 1];
@@ -49,24 +51,24 @@ class MinHeap{
 				};
 			};
 		} else if (this.heap.length == 2) {
-			this.heap.splice(1,1);
+			this.heap.splice(1, 1);
 		} else {
 			return null;
 		};
 		return smallest;
-    }
-    sort(){
-        let res=[]
-        while(this.heap.length>1){
+	}
+	sort() {
+		let res = []
+		while (this.heap.length > 1) {
 			res.push(this.remove())
 		}
 		console.log(this.heap.length);
-        console.log(res);
-    }
+		console.log(res);
+	}
 
 }
 
-const heap =new MinHeap()
+const heap = new MinHeap()
 heap.insert(10)
 heap.insert(20)
 heap.insert(30)

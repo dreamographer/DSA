@@ -11,6 +11,7 @@ class Maxheap {
         return
     }
 
+
     insert(val) {
         this.heap.push(val)
         if (this.heap.length > 2) {
@@ -20,6 +21,7 @@ class Maxheap {
                     [this.heap[idx], this.heap[Math.floor(idx / 2)]] = [this.heap[Math.floor(idx / 2)], this.heap[idx]]
                     if (Math.floor(idx / 2) > 1) {
                         idx = Math.floor(idx / 2)
+
                     } else {
                         break
                     }

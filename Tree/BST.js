@@ -61,22 +61,16 @@ class BinarySearchTree {
     }
 
     bfs() {
-        let queue = {}
-        let rear = 0
-        let front = 0
-        queue[rear] = this.root
-        rear++
-        while (rear != front) {
-            let cur = queue[front]
-            front++
+        let queue = []
+        queue.push(this.root)
+        while (queue.length>0) {
+            let cur = queue.shift()
             console.log(cur.val);
             if (cur.left) {
-                queue[rear] = cur.left
-                rear++
+                queue.push(cur.left)
             }
             if (cur.right) {
-                queue[rear] = cur.right
-                rear++
+                queue.push(cur.right)
             }
         }
     }
@@ -174,7 +168,7 @@ class BinarySearchTree {
     closestElement(k){
         let elements=this.inorderTraversal(this.root)
         let result=Math.abs(elements[0]-k) 
-        let ele
+        let ele=elements[0]
         for (let i = 1; i < elements.length; i++) {
             if(result>Math.abs(elements[i]-k)){
                 result=Math.abs(elements[i]-k)

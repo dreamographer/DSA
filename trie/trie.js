@@ -22,9 +22,9 @@ class Trie{
             return
         }else if(!node.keys.has(input[0])){
             node.keys.set(input[0],new Node());
-            return this.add(input.substr(1), node.keys.get(input[0]));
+            return this.add(input.substring(1), node.keys.get(input[0]));
         }else {
-			return this.add(input.substr(1), node.keys.get(input[0]));
+			return this.add(input.substring(1), node.keys.get(input[0]));
 		};      
     }
     isWord(word){
