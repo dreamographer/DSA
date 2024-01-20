@@ -4,7 +4,7 @@ class Graph{
         for (let i = 0; i < num; i++) {
             this.matrix.push(new Array(num).fill(0))
         }
-    }
+    } 
     addEdge(first,second){
         
         this.matrix[first][second]=1

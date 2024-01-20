@@ -33,7 +33,7 @@ class Graph{
         visited.add(root)
         while(queue.length>0){
             let cur=queue.shift()
-            console.log(cur);
+            
             this.list.get(cur).forEach(ele => {
                 if(!visited.has(ele)){
                     visited.add(ele)

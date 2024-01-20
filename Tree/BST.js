@@ -137,7 +137,7 @@ class BinarySearchTree {
         
     }
 
-    preorderTraversal(root) {
+    preorderTraversal(root=this.root) {
         let result=[]
         function preorder(root){
             if(root){
@@ -188,7 +188,4 @@ bst.insert(5)
 bst.insert(15)
 bst.insert(3)
 bst.insert(7)
-bst.bfs()
-console.log(bst.search(bst.root, 10));
-bst.deleteNode(10)
-bst.bfs()
+bst.preorderTraversal()

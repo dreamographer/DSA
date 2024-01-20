@@ -2,7 +2,6 @@ class Node{
     constructor(){
         this.keys=new Map()
         this.end=false
-        
     }
     setEnd(){
         this.end=true
@@ -19,7 +18,7 @@ class Trie{
     add(input,node=this.root){
         if(input.length==0){
             node.setEnd();
-            return
+            return 
         }else if(!node.keys.has(input[0])){
             node.keys.set(input[0],new Node());
             return this.add(input.substring(1), node.keys.get(input[0]));
@@ -70,7 +69,7 @@ myTrie.add('do');
 // myTrie.add('dorm')
 // myTrie.add('send')
 // myTrie.add('sense')
-console.log(myTrie.root)
-console.log(myTrie.isWord('dor'))
-console.log(myTrie.isWord('dorf'))
+// console.log(myTrie.root)
+// console.log(myTrie.isWord('dor'))
+// console.log(myTrie.isWord('dorf'))
 console.log(myTrie.print())
